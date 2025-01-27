@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <?php include (cabecalho.php); ?>
     <a href="./index.html">index </a> 
     <img src="img/logo.png" alt="Logo da Mirror Fashion">
     <h1>A Mirror Fashion</h1>
@@ -88,6 +89,7 @@
         &copy; Copyright Mirror Fashion
 
     </div>
+    <?php include("cabecalho.php");?>
 
 </body>
 
