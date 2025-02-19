@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="stylesheet" href="css/mobile.css" />
     <link rel="stylesheet" href="css/produtos.css" />
+    <?php $cabecalho_css = 'link rel="stylesheet" href="css/produto.css';?>
     
   </head>
 
