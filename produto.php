@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/mobile.css" />
     <link rel="stylesheet" href="css/produtos.css" />
     <?php $cabecalho_css = 'link rel="stylesheet" href="css/produto.css';?>
+    <?php
+    $conexao = myqli_connect("127.0.0.1", "root","","wd43")
+    $dados = mysqli_query($conexao,"SELECT * FROM produtos" );
+    $produto = mysliq_fetch_array($dados);
+    ?>
     
   </head>
 
@@ -20,7 +25,7 @@
         <div class="produto">
           <h1>Fuzzy Cardigan</h1>
           <p>por apenas R$ 129,00</p>
-          <form action="./checkout.html"> 
+          <form action="/checkout.php" method="POST"> 
             <fieldset class="cores">
               <legend>Escolha a cor</legend>
 

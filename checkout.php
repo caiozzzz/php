@@ -64,16 +64,16 @@
               />
               <dl>
                 <dt>Produtos</dt>
-                <dd>Fuzzy Cardigan</dd>
+                <dd><?=$_POST['nome']?></dd>
 
                 <dt>Cor</dt>
-                <dd>Verde</dd>
+                <dd><?=$_POST['cor']?></dd>
 
                 <dt>Tamaho</dt>
-                <dd>40</dd>
+                <dd><?=$_POST['tamanho']?></dd>
 
                 <dt>Preço</dt>
-                <dd id="preco">R$ 129,90</dd>
+                <dd id="preco"><?=$_POST['preco']?></dd>
               </dl>
             </div>
           </div>
