@@ -11,7 +11,7 @@
     <?php $cabecalho_css = 'link rel="stylesheet" href="css/produto.css';?>
     <?php
     $conexao = myqli_connect("127.0.0.1", "root","","wd43")
-    $dados = mysqli_query($conexao,"SELECT * FROM produtos" );
+    $dados = mysqli_query($conexao,"SELECT * FROM produtos where $_POST['nome']" );
     $produto = mysliq_fetch_array($dados);
     ?>
     
@@ -110,7 +110,7 @@
       </div>
     </div>
 
- 
+    <iframe width="" height="44" frameborder="0" src="https://www.facebook.com/v9.0/plugins/like.php?action=recommend&amp;app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df38739b8f21bc8%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff12b5052557ef34%26relation%3Dparent.parent&amp;container_width=734&amp;href=https://www.embedista.com/&amp;locale=en_US&amp;sdk=joey&amp;share=true" class="blocky" style="width: 500px;"></iframe><script type="text/javascript" src="https://www.embedista.com/j/likeshare.js"></script><div id="fbroot"></div><div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;"><a href="https://www.embedista.com/fb-buttons">Facebook Like Button Generator</a></div><div class="fblike" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
     <?php include("rodape.php"); ?>
     <script type="text/javascript" src="js/produto.js"></script>
    
