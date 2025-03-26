@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/mobile.css" />
     <link rel="stylesheet" href="css/produtos.css" />
     <?php $cabecalho_css = 'link rel="stylesheet" href="css/produto.css';?>
+
     <?php
-    $conexao = myqli_connect("127.0.0.1", "root","","wd43")
-    $dados = mysqli_query($conexao,"SELECT * FROM produtos where $_POST['nome']" );
-    $produto = mysliq_fetch_array($dados);
+    $conexao = mysqli_connect("127.0.0.1","root","","wd43");
+    $dados = mysqli_query($conexao,"SELECT * FROM produtos where");
     ?>
     
   </head>
