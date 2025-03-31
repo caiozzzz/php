@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 
    <?php
    $cabecalho_title="produto da Mirror Fashion";

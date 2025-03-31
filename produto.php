@@ -11,9 +11,11 @@
     <?php $cabecalho_css = 'link rel="stylesheet" href="css/produto.css';?>
 
     <?php
-    $conexao = mysqli_connect("127.0.0.1","root","","wd43");
-    $dados = mysqli_query($conexao,"SELECT * FROM produtos where");
-    ?>
+$conexao = mysqli_connect("127.0.0.1", "root", "", "WD43");
+$dados = mysqli_query($conexao, "SELECT * FROM produtos where id = $_GET[id]");
+    
+$produto = mysqli_fetch_array($dados);
+?>
     
   </head>
 
@@ -23,16 +25,16 @@
     <div class="produto-back">
       <div class="container">
         <div class="produto">
-          <h1>Fuzzy Cardigan</h1>
-          <p>por apenas R$ 129,00</p>
-          <form action="/checkout.php" method="POST"> 
+          <h1><?= $produto['nome']?></h1>
+          <p>por apenas <?= $produto['preco']?></p>
+          <form action="/php-main/checkout.php" method="POST"> 
             <fieldset class="cores">
               <legend>Escolha a cor</legend>
 
               <input checked type="radio" name="cor" id="verde" />
               <label for="verde">
                 <img
-                  src="img/produtos/foto1-verde.png"
+                  src="img/produtos/foto<?=$produto['id'] ?>-verde.png"
                   alt="Produto na cor azul"
                 />
               </label>
@@ -40,7 +42,7 @@
               <input type="radio" name="cor" id="rosa" />
               <label for="rosa">
                 <img
-                  src="img/produtos/foto1-rosa.png"
+                  src="img/produtos/foto<?=$produto['id']?>-rosa.png"
                   alt="Produto na cor azul"
                 />
               </label>
@@ -49,7 +51,7 @@
 
               <label for="azul">
                 <img
-                  src="img/produtos/foto1-azul.png"
+                  src="img/produtos/foto<?=$produto['id']?>-azul.png"
                   alt="Produto na cor azul"
                 />
               </label>
@@ -102,10 +104,7 @@
           </tbody>
         </table>
         <p>
-          Esse é o melhor casaco de Cardigã que voce já viu. Excelente material
-          italiano com estampa desenhada pelos artesãos da comunidade de Krotor
-          nas ilhas gregas. Compre já e receba hoje mesmo pela nossa entrega a
-          jato.
+         <?=$produto['descricao'] ?>
         </p>
       </div>
     </div>
