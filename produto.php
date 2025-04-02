@@ -28,10 +28,14 @@ $produto = mysqli_fetch_array($dados);
           <h1><?= $produto['nome']?></h1>
           <p>por apenas <?= $produto['preco']?></p>
           <form action="/php-main/checkout.php" method="POST"> 
+           <input  type="hidden" name="nome" id="nome" value="<?= $produto['nome']?>" />
+           <input  type="hidden" name="preco" id="preco" value="<?= $produto['preco']?>" />
+           <input  type="hidden" name="id" id="id" value="<?= $produto['id']?>"/>
+            
             <fieldset class="cores">
               <legend>Escolha a cor</legend>
 
-              <input checked type="radio" name="cor" id="verde" />
+              <input checked type="radio" name="cor" id="verde" value="verde" />
               <label for="verde">
                 <img
                   src="img/produtos/foto<?=$produto['id'] ?>-verde.png"
@@ -39,7 +43,7 @@ $produto = mysqli_fetch_array($dados);
                 />
               </label>
 
-              <input type="radio" name="cor" id="rosa" />
+              <input type="radio" name="cor" id="rosa"value="rosa"  />
               <label for="rosa">
                 <img
                   src="img/produtos/foto<?=$produto['id']?>-rosa.png"
@@ -47,7 +51,7 @@ $produto = mysqli_fetch_array($dados);
                 />
               </label>
 
-              <input type="radio" name="cor" id="azul" />
+              <input type="radio" name="cor" id="azul" value="azul" />
 
               <label for="azul">
                 <img

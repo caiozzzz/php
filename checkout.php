@@ -57,11 +57,9 @@
             <div class="card-header"><h2>Ótima Escolha!</h2></div>
 
             <div class="card-body">
-              <img
-                src="img/produtos/foto1-rosa.png"
-                alt="Fuzzy Cardigan"
-                class="img-thumbnail mb-3"
-              />
+              
+            <img src="img/produtos/foto<?= $_POST['id'] ?>-<?=$_POST['cor']?>.png" 
+            alt="<?= $_POST['nome']?>" />
               <dl>
                 <dt>Produtos</dt>
                 <dd><?=$_POST['nome']?></dd>
